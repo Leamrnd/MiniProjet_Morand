@@ -13,6 +13,7 @@ import java.util.Random;
 public class fenetreDeJeu extends javax.swing.JFrame {
         int cpt_coup;
         int record = 0;
+        int  nb_parties = -1;
     /**
      * Creates new form fenetreDeJeu
      */
@@ -49,6 +50,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         Label_Score = new javax.swing.JLabel();
         score_max = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        nb_part = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -175,6 +178,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("Nombre de parties jouées :");
+
         javax.swing.GroupLayout panneau_scoresLayout = new javax.swing.GroupLayout(panneau_scores);
         panneau_scores.setLayout(panneau_scoresLayout);
         panneau_scoresLayout.setHorizontalGroup(
@@ -188,15 +193,21 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(Label_Record))
-                        .addGap(44, 44, 44)
-                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Label_Score, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                            .addComponent(score_max, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(Label_Record)
+                            .addComponent(jLabel2))
+                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panneau_scoresLayout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_scoresLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(jButton10)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panneau_scoresLayout.setVerticalGroup(
             panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +222,11 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Label_Record))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
                 .addComponent(jButton10)
                 .addGap(38, 38, 38))
         );
@@ -229,11 +244,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton1ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton1.getBackground() == Color.CYAN) {
             Bouton1.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton1.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton1.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -243,11 +266,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton5ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton5.getBackground() == Color.CYAN) {
             Bouton5.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton5.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton5.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -257,11 +288,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton2ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton2.getBackground() == Color.CYAN) {
             Bouton2.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton2.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton2.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -271,11 +310,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton3ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton3.getBackground() == Color.CYAN) {
             Bouton3.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton3.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton3.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -285,11 +332,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton4ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton4.getBackground() == Color.CYAN) {
             Bouton4.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton4.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton4.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -299,11 +354,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton6ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton6.getBackground() == Color.CYAN) {
             Bouton6.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton6.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton6.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -313,11 +376,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton7ActionPerformed
         // TODO add your handling code here:
+        
         if (Bouton7.getBackground() == Color.CYAN) {
             Bouton7.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton7.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton7.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -327,11 +398,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void Bouton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton8ActionPerformed
         // TODO add your handling code here:
+      
         if (Bouton8.getBackground() == Color.CYAN) {
             Bouton8.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
+        }
+        else if(Bouton8.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton8.setBackground(Color.BLUE);
+            
         }
         else{
             cpt_coup -= 1;
@@ -343,11 +422,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (Bouton9.getBackground() == Color.CYAN) {
             Bouton9.setBackground(Color.BLUE);
+            supp_bouton_blanc();
             allumerCaseAlea();
             cpt_coup += 1;
             Label_Score.setText(cpt_coup + "");
         }
-        else{
+        else if(Bouton9.getBackground() == Color.white) {
+            cpt_coup -= 3;
+            Label_Score.setText(cpt_coup + "");
+            Bouton9.setBackground(Color.BLUE);
+            
+        }
+        else {
             cpt_coup -= 1;
             Label_Score.setText(cpt_coup + "");
         }
@@ -392,21 +478,20 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     
     public void allumerCaseAlea() {
         int nbbutt;
-        nbbutt = new Random().nextInt(10) ;
+        int bouton_piege;
+        int presence_piege;
+        nbbutt = new Random().nextInt(9)+ 1 ;
         System.out.println(nbbutt);
         
         if (nbbutt == 1) {
             Bouton1.setBackground(Color.CYAN);
         }
-        
         if (nbbutt == 2) {
             Bouton2.setBackground(Color.CYAN);
         }
-        
         if (nbbutt == 3) {
             Bouton3.setBackground(Color.CYAN);
         }
-        
         if (nbbutt == 4) {
             Bouton4.setBackground(Color.CYAN);
         }
@@ -425,7 +510,93 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         if (nbbutt == 9) {
             Bouton9.setBackground(Color.CYAN);
         }
+        
+        presence_piege = new Random().nextInt(5) + 1;
+        
+        if (presence_piege == 4) {
+        
+        bouton_piege = new Random().nextInt(9) + 1;
+                
+         if (bouton_piege == 1 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton1.setBackground(Color.white);
+        }
+        
+         if (bouton_piege == 2 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton2.setBackground(Color.white);
+        }
+         
+         if (bouton_piege == 3 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton3.setBackground(Color.white);
+        }
+          
+         if (bouton_piege == 4 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton4.setBackground(Color.white);
+        }
+           
+         if (bouton_piege == 5 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton5.setBackground(Color.white);
+        }
+            
+         if (bouton_piege == 6 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton6.setBackground(Color.white);
+        }
+             
+          if (bouton_piege == 7 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton7.setBackground(Color.white);
+        }
+          
+          if (bouton_piege == 8 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton8.setBackground(Color.white);
+        }
+         
+          if (bouton_piege == 9 && Bouton1.getBackground() != Color.CYAN) {
+            Bouton9.setBackground(Color.white);
+        }
+        } 
     }
+    
+    
+    public void supp_bouton_blanc() {
+        if (Bouton1.getBackground() == Color.white) {
+            Bouton1.setBackground(Color.blue);
+        }
+        
+        if (Bouton2.getBackground() == Color.white) {
+            Bouton2.setBackground(Color.blue);
+        }
+        
+        if (Bouton3.getBackground() == Color.white) {
+            Bouton3.setBackground(Color.blue);
+        }
+        
+        if (Bouton4.getBackground() == Color.white) {
+            Bouton4.setBackground(Color.blue);
+        }
+        
+        if (Bouton5.getBackground() == Color.white) {
+            Bouton5.setBackground(Color.blue);
+        }
+        
+        if (Bouton6.getBackground() == Color.white) {
+            Bouton6.setBackground(Color.blue);
+        }
+        
+        if (Bouton7.getBackground() == Color.white) {
+            Bouton7.setBackground(Color.blue);
+        }
+        
+        if (Bouton8.getBackground() == Color.white) {
+            Bouton8.setBackground(Color.blue);
+        }
+        
+        if (Bouton9.getBackground() == Color.white) {
+            Bouton9.setBackground(Color.blue);
+        }
+    }
+    
+    
+    
+    
     
     
     
@@ -434,6 +605,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             record = cpt_coup;
         }
         cpt_coup = 0;
+        nb_parties += 1;
+        nb_part.setText(nb_parties +"");
+        score_max.setText(record + "");
+        Label_Score.setText(cpt_coup + "");
         Bouton1.setBackground(Color.blue);
         Bouton2.setBackground(Color.blue);
         Bouton3.setBackground(Color.blue);
@@ -464,7 +639,9 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JLabel Label_Score;
     private javax.swing.JButton jButton10;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlab1;
+    private javax.swing.JLabel nb_part;
     private javax.swing.JPanel panneau_chrono;
     private javax.swing.JPanel panneau_grille;
     private javax.swing.JPanel panneau_nom;
