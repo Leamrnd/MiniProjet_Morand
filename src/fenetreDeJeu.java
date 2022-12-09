@@ -1,6 +1,9 @@
 
 import java.awt.Color;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -11,15 +14,36 @@ import java.util.Random;
  * @author EPF
  */
 public class fenetreDeJeu extends javax.swing.JFrame {
-        int cpt_coup;
+        int cpt_pts;
         int record = 0;
         int  nb_parties = -1;
+        int cpt_coup = 0;
+        Timer chrono = new Timer();
+        
+        
     /**
      * Creates new form fenetreDeJeu
      */
     public fenetreDeJeu() {
         initComponents();
         InitialiserPartie();
+        chrono.schedule(new TimerTask(){
+            
+            int time = 30;
+            
+            @Override
+            public void run(){
+                
+                if (time == 0) {
+                    System.out.println("Temps écoulé ! ");
+                    cancel();
+                    
+                }
+                
+                time --;
+                
+            }
+        }, 30000 , 1000); //attention temps en ms : pour 1sec delay = 1000
     }
 
     /**
@@ -249,18 +273,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton1.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton1.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton1.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton1ActionPerformed
 
@@ -271,18 +295,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton5.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton5.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton5.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton5ActionPerformed
 
@@ -293,18 +317,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton2.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton2.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton2.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton2ActionPerformed
 
@@ -315,18 +339,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton3.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton3.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton3.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton3ActionPerformed
 
@@ -337,18 +361,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton4.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton4.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton4.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton4ActionPerformed
 
@@ -359,18 +383,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton6.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton6.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton6.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton6ActionPerformed
 
@@ -381,18 +405,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton7.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton7.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton7.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton7ActionPerformed
 
@@ -403,18 +427,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton8.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton8.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton8.setBackground(Color.BLUE);
             
         }
         else{
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton8ActionPerformed
 
@@ -424,18 +448,18 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             Bouton9.setBackground(Color.BLUE);
             supp_bouton_blanc();
             allumerCaseAlea();
-            cpt_coup += 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
         }
         else if(Bouton9.getBackground() == Color.white) {
-            cpt_coup -= 3;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
             Bouton9.setBackground(Color.BLUE);
             
         }
         else {
-            cpt_coup -= 1;
-            Label_Score.setText(cpt_coup + "");
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton9ActionPerformed
 
@@ -601,14 +625,15 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     
     
     public void InitialiserPartie() {
-        if (cpt_coup > record) {
-            record = cpt_coup;
+        if (cpt_pts > record) {
+            record = cpt_pts;
         }
+        cpt_pts = 0;
         cpt_coup = 0;
         nb_parties += 1;
         nb_part.setText(nb_parties +"");
         score_max.setText(record + "");
-        Label_Score.setText(cpt_coup + "");
+        Label_Score.setText(cpt_pts + "");
         Bouton1.setBackground(Color.blue);
         Bouton2.setBackground(Color.blue);
         Bouton3.setBackground(Color.blue);
