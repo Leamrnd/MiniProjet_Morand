@@ -41,6 +41,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 }
                 
                 time --;
+                System.out.println(time);
+                tps_rest.setText(time +"");
                 
             }
         }, 30000 , 1000); //attention temps en ms : pour 1sec delay = 1000
@@ -67,6 +69,9 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         Bouton9 = new javax.swing.JButton();
         panneau_nom = new javax.swing.JPanel();
         panneau_chrono = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        tps_rest = new javax.swing.JLabel();
         panneau_scores = new javax.swing.JPanel();
         jlab1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -174,15 +179,33 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         panneau_chrono.setBackground(new java.awt.Color(0, 255, 255));
 
+        jLabel3.setText("Chrono");
+
+        jLabel4.setText("sec");
+
         javax.swing.GroupLayout panneau_chronoLayout = new javax.swing.GroupLayout(panneau_chrono);
         panneau_chrono.setLayout(panneau_chronoLayout);
         panneau_chronoLayout.setHorizontalGroup(
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
+            .addGroup(panneau_chronoLayout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tps_rest)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(37, 37, 37))
         );
         panneau_chronoLayout.setVerticalGroup(
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(panneau_chronoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tps_rest))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
@@ -239,17 +262,17 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jlab1)
                 .addGap(36, 36, 36)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(41, 41, 41)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Label_Record))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(23, 23, 23)
                 .addComponent(jButton10)
                 .addGap(38, 38, 38))
@@ -665,6 +688,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jlab1;
     private javax.swing.JLabel nb_part;
     private javax.swing.JPanel panneau_chrono;
@@ -672,5 +697,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JPanel panneau_nom;
     private javax.swing.JPanel panneau_scores;
     private javax.swing.JLabel score_max;
+    private javax.swing.JLabel tps_rest;
     // End of variables declaration//GEN-END:variables
 }
