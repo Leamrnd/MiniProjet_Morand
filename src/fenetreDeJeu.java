@@ -31,8 +31,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         initComponents();
         InitialiserPartie();
         
+        fenetre_tempsecoule fenetretemps = new fenetre_tempsecoule();
+        
         ActionListener tache_recur= new ActionListener() {
-            int time = 30;
+            int time = 5;
             
             @Override
             public void actionPerformed(ActionEvent e1) {
@@ -40,15 +42,21 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 if (time == 0) {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
+                    fenetretemps.setVisible(true);
+                    time = 5;
                 }
                 
+                else{
                 time--;
                 tps_rest.setText(time + "");
                 System.out.println(time);
-                
+                }
                 
             }
         ;};
+        
+        
+        
         
         
         
@@ -744,7 +752,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     
     
     public void InitialiserPartie() {
-        //chrono.
         if (cpt_pts > record) {
             record = cpt_pts;
         }
