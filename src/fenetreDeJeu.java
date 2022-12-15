@@ -23,6 +23,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         int  nb_parties = -1;
         int cpt_coup = 0;
         Timer chrono;
+        Timer chrono60;
+        Timer chronotemp;
         
     /**
      * Creates new form fenetreDeJeu
@@ -32,6 +34,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         InitialiserPartie();
         
         fenetre_tempsecoule fenetretemps = new fenetre_tempsecoule();
+        
+        
         
         ActionListener tache_recur= new ActionListener() {
             int time = 30;
@@ -54,35 +58,36 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 
             }
         ;};
-        
-        
-        
-        
-        
-        
-         chrono = new Timer(1000, tache_recur);       
+       
+         chrono = new Timer(1000, tache_recur);
          
-        //chrono.start();
-        
-       /* chrono.schedule(new TimerTask(){
-            
-            int time = 30;
+         
+         ActionListener tache_recur2= new ActionListener() {
+            int time = 60;
             
             @Override
-            public void run(){
+            public void actionPerformed(ActionEvent e1) {
                 
                 if (time == 0) {
                     System.out.println("Temps écoulé ! ");
-                    cancel();
-                    
+                    chrono.stop();
+                    fenetretemps.setVisible(true);
+                    time = 60;
                 }
                 
-                time --;
+                else{
+                time--;
+                tps_rest.setText(time + "");
                 System.out.println(time);
-                tps_rest.setText(time +"");
+                }
                 
             }
-        }, 30000 , 1000); */ //attention temps en ms : pour 1sec delay = 1000
+        ;};
+         
+         
+       chrono60 = new Timer(1000,tache_recur2); 
+        
+      chronotemp = chrono;
         
     }
 
@@ -228,10 +233,21 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jLabel4.setText("sec");
 
         buttonGroup1.add(jRadioButton30s);
+        jRadioButton30s.setSelected(true);
         jRadioButton30s.setText("30 secondes");
+        jRadioButton30s.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton30sActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton60s);
         jRadioButton60s.setText("60 secondes");
+        jRadioButton60s.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton60sActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panneau_chronoLayout = new javax.swing.GroupLayout(panneau_chrono);
         panneau_chrono.setLayout(panneau_chronoLayout);
@@ -246,9 +262,9 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRadioButton60s)
                     .addComponent(jRadioButton30s))
-                .addGap(45, 45, 45)
-                .addComponent(tps_rest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGap(37, 37, 37))
         );
@@ -256,16 +272,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_chronoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panneau_chronoLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(16, 16, 16)
                         .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(jRadioButton30s)))
-                    .addGroup(panneau_chronoLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton60s)
                 .addContainerGap(11, Short.MAX_VALUE))
@@ -617,7 +631,24 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jRadioButton30sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30sActionPerformed
+        // TODO add your handling code here:
+        if (jRadioButton30s.isSelected() == true) {
+            chrono = chronotemp;
+        }
+    }//GEN-LAST:event_jRadioButton30sActionPerformed
+
+    private void jRadioButton60sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60sActionPerformed
+        // TODO add your handling code here:
+        
+        if (jRadioButton60s.isSelected() == true) {
+            chronotemp = chrono;
+            chrono = chrono60;
+        }
+    }//GEN-LAST:event_jRadioButton60sActionPerformed
 
     /**
      * @param args the command line arguments
