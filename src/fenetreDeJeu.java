@@ -34,7 +34,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         fenetre_tempsecoule fenetretemps = new fenetre_tempsecoule();
         
         ActionListener tache_recur= new ActionListener() {
-            int time = 5;
+            int time = 30;
             
             @Override
             public void actionPerformed(ActionEvent e1) {
@@ -43,7 +43,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
                     fenetretemps.setVisible(true);
-                    time = 5;
+                    time = 30;
                 }
                 
                 else{
@@ -96,6 +96,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         panneau_grille = new javax.swing.JPanel();
         Bouton1 = new javax.swing.JButton();
         Bouton2 = new javax.swing.JButton();
@@ -111,6 +112,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tps_rest = new javax.swing.JLabel();
+        jRadioButton30s = new javax.swing.JRadioButton();
+        jRadioButton60s = new javax.swing.JRadioButton();
         panneau_scores = new javax.swing.JPanel();
         jlab1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -120,6 +123,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nb_part = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -222,20 +227,28 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         jLabel4.setText("sec");
 
+        buttonGroup1.add(jRadioButton30s);
+        jRadioButton30s.setText("30 secondes");
+
+        buttonGroup1.add(jRadioButton60s);
+        jRadioButton60s.setText("60 secondes");
+
         javax.swing.GroupLayout panneau_chronoLayout = new javax.swing.GroupLayout(panneau_chrono);
         panneau_chrono.setLayout(panneau_chronoLayout);
         panneau_chronoLayout.setHorizontalGroup(
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_chronoLayout.createSequentialGroup()
-                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panneau_chronoLayout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE))
-                    .addGroup(panneau_chronoLayout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(tps_rest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)))
+                .addGap(119, 119, 119)
+                .addComponent(jLabel3)
+                .addContainerGap(122, Short.MAX_VALUE))
+            .addGroup(panneau_chronoLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jRadioButton60s)
+                    .addComponent(jRadioButton30s))
+                .addGap(45, 45, 45)
+                .addComponent(tps_rest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addGap(37, 37, 37))
         );
@@ -243,13 +256,19 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_chronoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panneau_chronoLayout.createSequentialGroup()
+                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panneau_chronoLayout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addGap(16, 16, 16)
+                        .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jRadioButton30s)))
+                    .addGroup(panneau_chronoLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButton60s)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
@@ -323,6 +342,17 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         );
 
         getContentPane().add(panneau_scores, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 260, 290));
+
+        jButton1.setText("Version 4 x 4");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 50));
+
+        jButton2.setText("Version piégée");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 110, 50));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
@@ -585,6 +615,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Bouton9ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -789,11 +823,16 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JButton Bouton9;
     private javax.swing.JLabel Label_Record;
     private javax.swing.JLabel Label_Score;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JRadioButton jRadioButton30s;
+    private javax.swing.JRadioButton jRadioButton60s;
     private javax.swing.JLabel jlab1;
     private javax.swing.JLabel nb_part;
     private javax.swing.JPanel panneau_chrono;
