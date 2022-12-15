@@ -17,7 +17,7 @@ import javax.swing.Timer;
  *
  * @author EPF
  */
-public class fenetreDeJeu extends javax.swing.JFrame {
+public class fenetrev4x4 extends javax.swing.JFrame {
         int cpt_pts;
         int record = 0;
         int  nb_parties = -1;
@@ -29,7 +29,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     /**
      * Creates new form fenetreDeJeu
      */
-    public fenetreDeJeu() {
+    public fenetrev4x4() {
         initComponents();
         InitialiserPartie();
         
@@ -112,6 +112,13 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         Bouton7 = new javax.swing.JButton();
         Bouton8 = new javax.swing.JButton();
         Bouton9 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         panneau_nom = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panneau_chrono = new javax.swing.JPanel();
@@ -131,14 +138,15 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(153, 153, 153));
-        panneau_grille.setLayout(new java.awt.GridLayout(3, 3));
+        panneau_grille.setLayout(new java.awt.GridLayout(4, 4));
 
-        Bouton1.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton1.setBackground(new java.awt.Color(153, 0, 204));
         Bouton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton1ActionPerformed(evt);
@@ -146,7 +154,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton1);
 
-        Bouton2.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton2.setBackground(new java.awt.Color(153, 0, 204));
         Bouton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton2ActionPerformed(evt);
@@ -154,7 +162,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton2);
 
-        Bouton3.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton3.setBackground(new java.awt.Color(153, 0, 204));
         Bouton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton3ActionPerformed(evt);
@@ -162,7 +170,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton3);
 
-        Bouton4.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton4.setBackground(new java.awt.Color(153, 0, 204));
         Bouton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton4ActionPerformed(evt);
@@ -170,7 +178,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton4);
 
-        Bouton5.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton5.setBackground(new java.awt.Color(153, 0, 204));
         Bouton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton5ActionPerformed(evt);
@@ -178,7 +186,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton5);
 
-        Bouton6.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton6.setBackground(new java.awt.Color(153, 0, 204));
         Bouton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton6ActionPerformed(evt);
@@ -186,7 +194,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton6);
 
-        Bouton7.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton7.setBackground(new java.awt.Color(153, 0, 204));
         Bouton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton7ActionPerformed(evt);
@@ -194,7 +202,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton7);
 
-        Bouton8.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton8.setBackground(new java.awt.Color(153, 0, 204));
         Bouton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton8ActionPerformed(evt);
@@ -202,7 +210,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton8);
 
-        Bouton9.setBackground(new java.awt.Color(0, 0, 204));
+        Bouton9.setBackground(new java.awt.Color(153, 0, 204));
         Bouton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton9ActionPerformed(evt);
@@ -210,13 +218,39 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton9);
 
+        jButton3.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton3);
+
+        jButton4.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton4);
+
+        jButton5.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton5);
+
+        jButton6.setBackground(new java.awt.Color(153, 0, 204));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        panneau_grille.add(jButton6);
+
+        jButton7.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton7);
+
+        jButton9.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton9);
+
+        jButton11.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(jButton11);
+
         getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 410, 440));
 
-        panneau_nom.setBackground(new java.awt.Color(0, 0, 204));
+        panneau_nom.setBackground(new java.awt.Color(153, 0, 204));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Wide Latin", 3, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(204, 102, 255));
         jLabel5.setText("SpeedClick");
 
         javax.swing.GroupLayout panneau_nomLayout = new javax.swing.GroupLayout(panneau_nom);
@@ -238,7 +272,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         getContentPane().add(panneau_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 430, -1));
 
-        panneau_chrono.setBackground(new java.awt.Color(0, 255, 255));
+        panneau_chrono.setBackground(new java.awt.Color(204, 102, 255));
 
         jLabel3.setText("Chrono");
 
@@ -379,6 +413,9 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 110, 50));
+
+        jButton8.setText("jButton8");
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
@@ -662,6 +699,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jRadioButton60sActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -869,7 +910,15 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
