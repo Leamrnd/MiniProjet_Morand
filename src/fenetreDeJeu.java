@@ -130,7 +130,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -370,15 +369,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         getContentPane().add(panneau_scores, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 260, 290));
 
         jButton1.setText("Version 4 x 4");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 50));
-
-        jButton2.setText("Version piégée");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 110, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
@@ -641,11 +637,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Bouton9ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jRadioButton30sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30sActionPerformed
         // TODO add your handling code here:
         if (jRadioButton30s.isSelected() == true) {
@@ -661,6 +652,13 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             chrono = chrono60;
         }
     }//GEN-LAST:event_jRadioButton60sActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        fenetrev4x4 fen4 = new fenetrev4x4();
+        fen4.setVisible(true);
+        fenetreDeJeu.super.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -869,7 +867,6 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
