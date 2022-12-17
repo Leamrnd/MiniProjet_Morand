@@ -477,6 +477,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -505,6 +506,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -533,6 +535,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -561,6 +564,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -589,6 +593,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -617,6 +622,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -645,6 +651,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -673,6 +680,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -700,6 +708,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -743,6 +752,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -778,6 +788,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -805,6 +816,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -832,6 +844,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -859,6 +872,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -886,6 +900,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -913,6 +928,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              jButton1.setEnabled(false);
               
             }
         }
@@ -1172,7 +1188,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
       Bouton14.setEnabled(false);
       Bouton15.setEnabled(false);
       Bouton16.setEnabled(false);
-         
+      
+      jButton1.setEnabled(true);
   }
   
   
@@ -1194,6 +1211,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
       Bouton15.setEnabled(true);
       Bouton16.setEnabled(true);
          
+      jButton1.setEnabled(false);
   }
     
     
