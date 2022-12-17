@@ -225,12 +225,27 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         panneau_grille.add(Bouton9);
 
         Bouton10.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton10ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton10);
 
         Bouton11.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton11ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton11);
 
         Bouton12.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton12ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton12);
 
         Bouton13.setBackground(new java.awt.Color(153, 0, 204));
@@ -242,12 +257,27 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         panneau_grille.add(Bouton13);
 
         Bouton14.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton14ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton14);
 
         Bouton15.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton15ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton15);
 
         Bouton16.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton16ActionPerformed(evt);
+            }
+        });
         panneau_grille.add(Bouton16);
 
         getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 410, 440));
@@ -699,6 +729,29 @@ public class fenetrev4x4 extends javax.swing.JFrame {
 
     private void Bouton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton13ActionPerformed
         // TODO add your handling code here:
+        if (Bouton13.getBackground() == violetclair) {
+            Bouton13.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton13.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton13.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
     }//GEN-LAST:event_Bouton13ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -708,6 +761,168 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         fenetrev4x4.super.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Bouton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton10ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton10.getBackground() == violetclair) {
+            Bouton10.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton10.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton10.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton10ActionPerformed
+
+    private void Bouton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton11ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton11.getBackground() == violetclair) {
+            Bouton11.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton11.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton11.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton11ActionPerformed
+
+    private void Bouton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton12ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton12.getBackground() == violetclair) {
+            Bouton12.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton12.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton12.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton12ActionPerformed
+
+    private void Bouton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton14ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton14.getBackground() == violetclair) {
+            Bouton14.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton14.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton14.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton14ActionPerformed
+
+    private void Bouton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton15ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton15.getBackground() == violetclair) {
+            Bouton15.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton15.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton15.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton15ActionPerformed
+
+    private void Bouton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton16ActionPerformed
+        // TODO add your handling code here:
+        if (Bouton16.getBackground() == violetclair) {
+            Bouton16.setBackground(violetfonce);
+            supp_bouton_blanc();
+            allumerCaseAlea();
+            allumerpiege();
+            cpt_pts += 1;
+            Label_Score.setText(cpt_pts + "");
+            cpt_coup += 1;
+            if (cpt_coup == 1) {
+              chrono.start();
+              
+            }
+        }
+        else if(Bouton16.getBackground() == Color.white) {
+            cpt_pts -= 3;
+            Label_Score.setText(cpt_pts + "");
+            Bouton16.setBackground(violetfonce);
+            
+        }
+        else {
+            cpt_pts -= 1;
+            Label_Score.setText(cpt_pts + "");
+        }
+    }//GEN-LAST:event_Bouton16ActionPerformed
 
     /**
      * @param args the command line arguments
