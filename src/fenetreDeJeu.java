@@ -47,6 +47,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
                     fenetretemps.setVisible(true);
+                    timeout();
                     time = 30;
                 }
                 
@@ -72,6 +73,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
                     fenetretemps.setVisible(true);
+                    timeout();
                     time = 60;
                 }
                 
@@ -382,6 +384,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         chrono.stop();
+        timein();
         InitialiserPartie();
         
     }//GEN-LAST:event_jButton10ActionPerformed
@@ -821,7 +824,32 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     }
     
     
-    
+    public void timeout() {
+      Bouton1.setEnabled(false);
+      Bouton2.setEnabled(false);
+      Bouton3.setEnabled(false);
+      Bouton4.setEnabled(false);
+      Bouton5.setEnabled(false);
+      Bouton6.setEnabled(false);
+      Bouton7.setEnabled(false);
+      Bouton8.setEnabled(false);
+      Bouton9.setEnabled(false);
+      
+    }
+  
+  
+    public void timein() {
+      Bouton1.setEnabled(true);
+      Bouton2.setEnabled(true);
+      Bouton3.setEnabled(true);
+      Bouton4.setEnabled(true);
+      Bouton5.setEnabled(true);
+      Bouton6.setEnabled(true);
+      Bouton7.setEnabled(true);
+      Bouton8.setEnabled(true);
+      Bouton9.setEnabled(true);
+      
+    }
     
     
     
