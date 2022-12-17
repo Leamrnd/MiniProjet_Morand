@@ -32,6 +32,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     public fenetrev4x4() {
         initComponents();
         InitialiserPartie();
+
+        
         
         fenetre_tempsecoule fenetretemps = new fenetre_tempsecoule();
         
@@ -88,9 +90,14 @@ public class fenetrev4x4 extends javax.swing.JFrame {
        chrono60 = new Timer(1000,tache_recur2); 
         
       chronotemp = chrono;
+      
         
     }
 
+    
+    Color violetclair = new Color(204,102,255);
+    Color violetfonce = new Color(153,0,204);
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -112,13 +119,13 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         Bouton7 = new javax.swing.JButton();
         Bouton8 = new javax.swing.JButton();
         Bouton9 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        Bouton10 = new javax.swing.JButton();
+        Bouton11 = new javax.swing.JButton();
+        Bouton12 = new javax.swing.JButton();
+        Bouton13 = new javax.swing.JButton();
+        Bouton14 = new javax.swing.JButton();
+        Bouton15 = new javax.swing.JButton();
+        Bouton16 = new javax.swing.JButton();
         panneau_nom = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         panneau_chrono = new javax.swing.JPanel();
@@ -137,7 +144,6 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -218,31 +224,31 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         });
         panneau_grille.add(Bouton9);
 
-        jButton3.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton3);
+        Bouton10.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton10);
 
-        jButton4.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton4);
+        Bouton11.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton11);
 
-        jButton5.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton5);
+        Bouton12.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton12);
 
-        jButton6.setBackground(new java.awt.Color(153, 0, 204));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Bouton13.setBackground(new java.awt.Color(153, 0, 204));
+        Bouton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                Bouton13ActionPerformed(evt);
             }
         });
-        panneau_grille.add(jButton6);
+        panneau_grille.add(Bouton13);
 
-        jButton7.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton7);
+        Bouton14.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton14);
 
-        jButton9.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton9);
+        Bouton15.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton15);
 
-        jButton11.setBackground(new java.awt.Color(153, 0, 204));
-        panneau_grille.add(jButton11);
+        Bouton16.setBackground(new java.awt.Color(153, 0, 204));
+        panneau_grille.add(Bouton16);
 
         getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 410, 440));
 
@@ -403,16 +409,13 @@ public class fenetrev4x4 extends javax.swing.JFrame {
 
         getContentPane().add(panneau_scores, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 260, 290));
 
-        jButton1.setText("Version 4 x 4");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 50));
-
-        jButton2.setText("Version piégée");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Version 3 x 3");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 110, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
 
         jButton8.setText("jButton8");
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
@@ -430,8 +433,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton1ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton1.getBackground() == Color.CYAN) {
-            Bouton1.setBackground(Color.BLUE);
+        if (Bouton1.getBackground() == violetclair) {
+            Bouton1.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -446,7 +449,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton1.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton1.setBackground(Color.BLUE);
+            Bouton1.setBackground(violetfonce);
             
         }
         else{
@@ -458,8 +461,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton5ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton5.getBackground() == Color.CYAN) {
-            Bouton5.setBackground(Color.BLUE);
+        if (Bouton5.getBackground() == violetclair) {
+            Bouton5.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -474,7 +477,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton5.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton5.setBackground(Color.BLUE);
+            Bouton5.setBackground(violetfonce);
             
         }
         else{
@@ -486,8 +489,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton2ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton2.getBackground() == Color.CYAN) {
-            Bouton2.setBackground(Color.BLUE);
+        if (Bouton2.getBackground() == violetclair) {
+            Bouton2.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -502,7 +505,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton2.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton2.setBackground(Color.BLUE);
+            Bouton2.setBackground(violetfonce);
             
         }
         else{
@@ -514,8 +517,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton3ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton3.getBackground() == Color.CYAN) {
-            Bouton3.setBackground(Color.BLUE);
+        if (Bouton3.getBackground() == violetclair) {
+            Bouton3.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -530,7 +533,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton3.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton3.setBackground(Color.BLUE);
+            Bouton3.setBackground(violetfonce);
             
         }
         else{
@@ -542,8 +545,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton4ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton4.getBackground() == Color.CYAN) {
-            Bouton4.setBackground(Color.BLUE);
+        if (Bouton4.getBackground() == violetclair) {
+            Bouton4.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -558,7 +561,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton4.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton4.setBackground(Color.BLUE);
+            Bouton4.setBackground(violetfonce);
             
         }
         else{
@@ -570,8 +573,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton6ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton6.getBackground() == Color.CYAN) {
-            Bouton6.setBackground(Color.BLUE);
+        if (Bouton6.getBackground() == violetclair) {
+            Bouton6.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -586,7 +589,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton6.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton6.setBackground(Color.BLUE);
+            Bouton6.setBackground(violetfonce);
             
         }
         else{
@@ -598,8 +601,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton7ActionPerformed
         // TODO add your handling code here:
         
-        if (Bouton7.getBackground() == Color.CYAN) {
-            Bouton7.setBackground(Color.BLUE);
+        if (Bouton7.getBackground() == violetclair) {
+            Bouton7.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -614,7 +617,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton7.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton7.setBackground(Color.BLUE);
+            Bouton7.setBackground(violetfonce);
             
         }
         else{
@@ -626,8 +629,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void Bouton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton8ActionPerformed
         // TODO add your handling code here:
       
-        if (Bouton8.getBackground() == Color.CYAN) {
-            Bouton8.setBackground(Color.BLUE);
+        if (Bouton8.getBackground() == violetclair) {
+            Bouton8.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -642,7 +645,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton8.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton8.setBackground(Color.BLUE);
+            Bouton8.setBackground(violetfonce);
             
         }
         else{
@@ -653,8 +656,8 @@ public class fenetrev4x4 extends javax.swing.JFrame {
 
     private void Bouton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton9ActionPerformed
         // TODO add your handling code here:
-        if (Bouton9.getBackground() == Color.CYAN) {
-            Bouton9.setBackground(Color.BLUE);
+        if (Bouton9.getBackground() == violetclair) {
+            Bouton9.setBackground(violetfonce);
             supp_bouton_blanc();
             allumerCaseAlea();
             allumerpiege();
@@ -669,7 +672,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         else if(Bouton9.getBackground() == Color.white) {
             cpt_pts -= 3;
             Label_Score.setText(cpt_pts + "");
-            Bouton9.setBackground(Color.BLUE);
+            Bouton9.setBackground(violetfonce);
             
         }
         else {
@@ -677,11 +680,6 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             Label_Score.setText(cpt_pts + "");
         }
     }//GEN-LAST:event_Bouton9ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton30sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30sActionPerformed
         // TODO add your handling code here:
@@ -699,9 +697,17 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jRadioButton60sActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void Bouton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_Bouton13ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        fenetreDeJeu fen3 = new fenetreDeJeu();
+        fen3.setVisible(true);
+        fenetrev4x4.super.dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -744,36 +750,57 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         int nbbutt;
         int bouton_piege;
         int presence_piege;
-        nbbutt = new Random().nextInt(9)+ 1 ;
+        nbbutt = new Random().nextInt(16)+ 1 ;
         System.out.println(nbbutt);
         
         if (nbbutt == 1) {
-            Bouton1.setBackground(Color.CYAN);
+            Bouton1.setBackground(violetclair);
         }
         if (nbbutt == 2) {
-            Bouton2.setBackground(Color.CYAN);
+            Bouton2.setBackground(violetclair);
         }
         if (nbbutt == 3) {
-            Bouton3.setBackground(Color.CYAN);
+            Bouton3.setBackground(violetclair);
         }
         if (nbbutt == 4) {
-            Bouton4.setBackground(Color.CYAN);
+            Bouton4.setBackground(violetclair);
         }
         if (nbbutt == 5) {
-            Bouton5.setBackground(Color.CYAN);
+            Bouton5.setBackground(violetclair);
         }
         if (nbbutt == 6) {
-            Bouton6.setBackground(Color.CYAN);
+            Bouton6.setBackground(violetclair);
         }
         if (nbbutt == 7) {
-            Bouton7.setBackground(Color.CYAN);
+            Bouton7.setBackground(violetclair);
         }
         if (nbbutt == 8) {
-            Bouton8.setBackground(Color.CYAN);
+            Bouton8.setBackground(violetclair);
         }
         if (nbbutt == 9) {
-            Bouton9.setBackground(Color.CYAN);
+            Bouton9.setBackground(violetclair);
         }
+        if (nbbutt == 10) {
+            Bouton10.setBackground(violetclair);
+        }
+        if (nbbutt == 11) {
+            Bouton11.setBackground(violetclair);
+        }
+        if (nbbutt == 12) {
+            Bouton12.setBackground(violetclair);
+        }
+        if (nbbutt == 13) {
+            Bouton13.setBackground(violetclair);
+        }
+        if (nbbutt == 14) {
+            Bouton14.setBackground(violetclair);
+        }
+        if (nbbutt == 15) {
+            Bouton15.setBackground(violetclair);
+        }
+        if (nbbutt == 16) {
+            Bouton16.setBackground(violetclair);
+        }   
     }
         
         
@@ -784,88 +811,132 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         
         if (presence_piege == 4) {
         
-            bouton_piege = new Random().nextInt(9) + 1;
+            bouton_piege = new Random().nextInt(16) + 1;
 
-             if (bouton_piege == 1 && Bouton1.getBackground() != Color.CYAN) {
+             if (bouton_piege == 1 && Bouton1.getBackground() != violetclair) {
                 Bouton1.setBackground(Color.white);
             }
 
-             if (bouton_piege == 2 && Bouton2.getBackground() != Color.CYAN) {
+             if (bouton_piege == 2 && Bouton2.getBackground() != violetclair) {
                 Bouton2.setBackground(Color.white);
             }
 
-             if (bouton_piege == 3 && Bouton3.getBackground() != Color.CYAN) {
+             if (bouton_piege == 3 && Bouton3.getBackground() != violetclair) {
                 Bouton3.setBackground(Color.white);
             }
 
-             if (bouton_piege == 4 && Bouton4.getBackground() != Color.CYAN) {
+             if (bouton_piege == 4 && Bouton4.getBackground() != violetclair) {
                 Bouton4.setBackground(Color.white);
             }
 
-             if (bouton_piege == 5 && Bouton5.getBackground() != Color.CYAN) {
+             if (bouton_piege == 5 && Bouton5.getBackground() != violetclair) {
                 Bouton5.setBackground(Color.white);
             }
 
-             if (bouton_piege == 6 && Bouton6.getBackground() != Color.CYAN) {
+             if (bouton_piege == 6 && Bouton6.getBackground() != violetclair) {
                 Bouton6.setBackground(Color.white);
             }
 
-              if (bouton_piege == 7 && Bouton7.getBackground() != Color.CYAN) {
+              if (bouton_piege == 7 && Bouton7.getBackground() != violetclair) {
                 Bouton7.setBackground(Color.white);
             }
 
-              if (bouton_piege == 8 && Bouton8.getBackground() != Color.CYAN) {
+              if (bouton_piege == 8 && Bouton8.getBackground() != violetclair) {
                 Bouton8.setBackground(Color.white);
             }
 
-              if (bouton_piege == 9 && Bouton9.getBackground() != Color.CYAN) {
+              if (bouton_piege == 9 && Bouton9.getBackground() != violetclair) {
                 Bouton9.setBackground(Color.white);
             }
+              if (bouton_piege == 10 && Bouton10.getBackground() != violetclair) {
+                Bouton10.setBackground(Color.white);
+            }
+              if (bouton_piege == 11 && Bouton11.getBackground() != violetclair) {
+                Bouton11.setBackground(Color.white);
+            }
+              if (bouton_piege == 12 && Bouton12.getBackground() != violetclair) {
+                Bouton12.setBackground(Color.white);
+            }
+              if (bouton_piege == 13 && Bouton13.getBackground() != violetclair) {
+                Bouton13.setBackground(Color.white);
+            }
+              if (bouton_piege == 14 && Bouton14.getBackground() != violetclair) {
+                Bouton14.setBackground(Color.white);
+            }
+              if (bouton_piege == 15 && Bouton15.getBackground() != violetclair) {
+                Bouton15.setBackground(Color.white);
+            }
+              if (bouton_piege == 16 && Bouton16.getBackground() != violetclair) {
+                Bouton16.setBackground(Color.white);
+            }
+              
+              
         } 
     }
     
     
     public void supp_bouton_blanc() {
         if (Bouton1.getBackground() == Color.white) {
-            Bouton1.setBackground(Color.blue);
+            Bouton1.setBackground(violetfonce);
         }
         
         if (Bouton2.getBackground() == Color.white) {
-            Bouton2.setBackground(Color.blue);
+            Bouton2.setBackground(violetfonce);
         }
         
         if (Bouton3.getBackground() == Color.white) {
-            Bouton3.setBackground(Color.blue);
+            Bouton3.setBackground(violetfonce);
         }
         
         if (Bouton4.getBackground() == Color.white) {
-            Bouton4.setBackground(Color.blue);
+            Bouton4.setBackground(violetfonce);
         }
         
         if (Bouton5.getBackground() == Color.white) {
-            Bouton5.setBackground(Color.blue);
+            Bouton5.setBackground(violetfonce);
         }
         
         if (Bouton6.getBackground() == Color.white) {
-            Bouton6.setBackground(Color.blue);
+            Bouton6.setBackground(violetfonce);
         }
         
         if (Bouton7.getBackground() == Color.white) {
-            Bouton7.setBackground(Color.blue);
+            Bouton7.setBackground(violetfonce);
         }
         
         if (Bouton8.getBackground() == Color.white) {
-            Bouton8.setBackground(Color.blue);
+            Bouton8.setBackground(violetfonce);
         }
         
         if (Bouton9.getBackground() == Color.white) {
-            Bouton9.setBackground(Color.blue);
+            Bouton9.setBackground(violetfonce);
         }
+        if (Bouton10.getBackground() == Color.white) {
+            Bouton10.setBackground(violetfonce);
+        }
+        if (Bouton11.getBackground() == Color.white) {
+            Bouton11.setBackground(violetfonce);
+        }
+        if (Bouton12.getBackground() == Color.white) {
+            Bouton12.setBackground(violetfonce);
+        }
+        if (Bouton13.getBackground() == Color.white) {
+            Bouton13.setBackground(violetfonce);
+        }
+        if (Bouton14.getBackground() == Color.white) {
+            Bouton14.setBackground(violetfonce);
+        }
+        if (Bouton15.getBackground() == Color.white) {
+            Bouton15.setBackground(violetfonce);
+        }
+        if (Bouton16.getBackground() == Color.white) {
+            Bouton16.setBackground(violetfonce);
+        }
+        
     }
     
     
-    
-    
+  
     
     
     
@@ -879,24 +950,37 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         nb_part.setText(nb_parties +"");
         score_max.setText(record + "");
         Label_Score.setText(cpt_pts + "");
-        Bouton1.setBackground(Color.blue);
-        Bouton2.setBackground(Color.blue);
-        Bouton3.setBackground(Color.blue);
-        Bouton4.setBackground(Color.blue);
-        Bouton5.setBackground(Color.blue);
-        Bouton6.setBackground(Color.blue);
-        Bouton7.setBackground(Color.blue);
-        Bouton8.setBackground(Color.blue);
-        Bouton9.setBackground(Color.blue);
+        Bouton1.setBackground(violetfonce);
+        Bouton2.setBackground(violetfonce);
+        Bouton3.setBackground(violetfonce);
+        Bouton4.setBackground(violetfonce);
+        Bouton5.setBackground(violetfonce);
+        Bouton6.setBackground(violetfonce);
+        Bouton7.setBackground(violetfonce);
+        Bouton8.setBackground(violetfonce);
+        Bouton9.setBackground(violetfonce);
+        Bouton10.setBackground(violetfonce);
+        Bouton11.setBackground(violetfonce);
+        Bouton12.setBackground(violetfonce);
+        Bouton13.setBackground(violetfonce);
+        Bouton14.setBackground(violetfonce);
+        Bouton15.setBackground(violetfonce);
+        Bouton16.setBackground(violetfonce);
         
         allumerCaseAlea();
-        
-        //remettre le chrono au debut
+       
     }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bouton1;
+    private javax.swing.JButton Bouton10;
+    private javax.swing.JButton Bouton11;
+    private javax.swing.JButton Bouton12;
+    private javax.swing.JButton Bouton13;
+    private javax.swing.JButton Bouton14;
+    private javax.swing.JButton Bouton15;
+    private javax.swing.JButton Bouton16;
     private javax.swing.JButton Bouton2;
     private javax.swing.JButton Bouton3;
     private javax.swing.JButton Bouton4;
@@ -910,15 +994,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
