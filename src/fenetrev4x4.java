@@ -49,6 +49,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
                     fenetretemps.setVisible(true);
+                    timeout();
                     time = 30;
                 }
                 
@@ -74,6 +75,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                     System.out.println("Temps écoulé ! ");
                     chrono.stop();
                     fenetretemps.setVisible(true);
+                    timeout();
                     time = 60;
                 }
                 
@@ -310,6 +312,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
 
         panneau_chrono.setBackground(new java.awt.Color(204, 102, 255));
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Chrono");
 
         jLabel4.setText("sec");
@@ -336,41 +339,41 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         panneau_chronoLayout.setHorizontalGroup(
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_chronoLayout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(jLabel3)
-                .addContainerGap(122, Short.MAX_VALUE))
-            .addGroup(panneau_chronoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRadioButton60s)
                     .addComponent(jRadioButton30s))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGap(37, 37, 37))
+            .addGroup(panneau_chronoLayout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panneau_chronoLayout.setVerticalGroup(
             panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_chronoLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(16, 16, 16)
                 .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panneau_chronoLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(16, 16, 16)
-                        .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jRadioButton30s)))
+                    .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(jRadioButton30s))
                     .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton60s)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
 
         panneau_scores.setBackground(new java.awt.Color(204, 204, 204));
 
+        jlab1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jlab1.setText("Scores");
 
         jLabel1.setText("Score actuel :");
@@ -393,9 +396,6 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             .addGroup(panneau_scoresLayout.createSequentialGroup()
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(jlab1))
-                    .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -412,15 +412,18 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                                 .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(jButton10)))
+                        .addComponent(jButton10))
+                    .addGroup(panneau_scoresLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(jlab1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panneau_scoresLayout.setVerticalGroup(
             panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_scoresLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(25, 25, 25)
                 .addComponent(jlab1)
-                .addGap(36, 36, 36)
+                .addGap(39, 39, 39)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -428,7 +431,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Label_Record))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -456,6 +459,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         chrono.stop();
+        timein();
         InitialiserPartie();
         
     }//GEN-LAST:event_jButton10ActionPerformed
@@ -1151,7 +1155,46 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     }
     
     
+  public void timeout() {
+      Bouton1.setEnabled(false);
+      Bouton2.setEnabled(false);
+      Bouton3.setEnabled(false);
+      Bouton4.setEnabled(false);
+      Bouton5.setEnabled(false);
+      Bouton6.setEnabled(false);
+      Bouton7.setEnabled(false);
+      Bouton8.setEnabled(false);
+      Bouton9.setEnabled(false);
+      Bouton10.setEnabled(false);
+      Bouton11.setEnabled(false);
+      Bouton12.setEnabled(false);
+      Bouton13.setEnabled(false);
+      Bouton14.setEnabled(false);
+      Bouton15.setEnabled(false);
+      Bouton16.setEnabled(false);
+         
+  }
   
+  
+    public void timein() {
+      Bouton1.setEnabled(true);
+      Bouton2.setEnabled(true);
+      Bouton3.setEnabled(true);
+      Bouton4.setEnabled(true);
+      Bouton5.setEnabled(true);
+      Bouton6.setEnabled(true);
+      Bouton7.setEnabled(true);
+      Bouton8.setEnabled(true);
+      Bouton9.setEnabled(true);
+      Bouton10.setEnabled(true);
+      Bouton11.setEnabled(true);
+      Bouton12.setEnabled(true);
+      Bouton13.setEnabled(true);
+      Bouton14.setEnabled(true);
+      Bouton15.setEnabled(true);
+      Bouton16.setEnabled(true);
+         
+  }
     
     
     
