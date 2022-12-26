@@ -6,6 +6,10 @@ import java.util.Random;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.Timer;
 
 /*
@@ -92,6 +96,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
       chronotemp = chrono;
         
     }
+    
+    
 
     
     /**
@@ -134,6 +140,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(770, 570));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(153, 153, 153));
@@ -300,13 +307,16 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
 
-        panneau_scores.setBackground(new java.awt.Color(204, 204, 204));
+        panneau_scores.setBackground(new java.awt.Color(102, 102, 102));
 
         jlab1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jlab1.setForeground(new java.awt.Color(255, 255, 255));
         jlab1.setText("Scores");
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Score actuel :");
 
+        Label_Record.setForeground(new java.awt.Color(255, 255, 255));
         Label_Record.setText("Record :");
 
         jButton10.setText("Rejouer");
@@ -316,6 +326,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre de parties jouées :");
 
         javax.swing.GroupLayout panneau_scoresLayout = new javax.swing.GroupLayout(panneau_scores);
@@ -353,12 +364,13 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jlab1)
                 .addGap(39, 39, 39)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(41, 41, 41)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panneau_scoresLayout.createSequentialGroup()
+                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(41, 41, 41)
+                        .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Label_Record))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,6 +415,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -431,7 +451,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
             }
         }
         else if(Bouton5.getBackground() == Color.white) {
@@ -459,6 +486,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -487,6 +522,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -515,6 +558,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -543,6 +594,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -571,6 +630,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -599,6 +666,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -626,6 +701,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
+              if (chrono == chronotemp) {
+                PlayMusic("v3x3_30sec.wav");
+                jButton1.setEnabled(false);
+              }
+              else {
+                PlayMusic("v3x3_60sec.wav");  
+                jButton1.setEnabled(false);
+              }
               
             }
         }
@@ -836,6 +919,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
       Bouton8.setEnabled(false);
       Bouton9.setEnabled(false);
       
+      jButton1.setEnabled(true);
+      
     }
   
   
@@ -849,6 +934,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
       Bouton7.setEnabled(true);
       Bouton8.setEnabled(true);
       Bouton9.setEnabled(true);
+      
+      jButton1.setEnabled(false);
       
     }
     
@@ -878,6 +965,24 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         allumerCaseAlea();
         
         //remettre le chrono au debut
+    }
+    
+    
+    public static void PlayMusic(String location) {
+        try {
+            File musicPath = new File(location);
+            if(musicPath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+            }
+            else {
+                System.out.println("Trouve pas le fichier");
+            }
+        }catch(Exception e) {
+           
+        }
     }
     
 
