@@ -138,6 +138,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(770, 570));
@@ -244,7 +245,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                 .addGap(26, 26, 26))
         );
 
-        getContentPane().add(panneau_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 430, -1));
+        getContentPane().add(panneau_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 430, 100));
 
         panneau_chrono.setBackground(new java.awt.Color(0, 255, 255));
 
@@ -392,6 +393,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/saturne.jpg"))); // NOI18N
+        jLabel6.setPreferredSize(new java.awt.Dimension(770, 570));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 610));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
@@ -1027,6 +1032,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButton jRadioButton30s;
     private javax.swing.JRadioButton jRadioButton60s;
     private javax.swing.JLabel jlab1;
