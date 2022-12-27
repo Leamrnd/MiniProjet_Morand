@@ -151,11 +151,13 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(153, 153, 153));
+        panneau_grille.setOpaque(false);
         panneau_grille.setLayout(new java.awt.GridLayout(4, 4));
 
         Bouton1.setBackground(new java.awt.Color(153, 0, 204));
@@ -408,12 +410,13 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                         .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panneau_scoresLayout.createSequentialGroup()
                                 .addGap(44, 44, 44)
-                                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_scoresLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Label_Score, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(score_max, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(jButton10))
@@ -427,19 +430,19 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             .addGroup(panneau_scoresLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jlab1)
-                .addGap(39, 39, 39)
+                .addGap(26, 26, 26)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(41, 41, 41)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Label_Record))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(23, 23, 23)
+                    .addComponent(Label_Record)
+                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addGap(38, 38, 38))
         );
@@ -456,6 +459,10 @@ public class fenetrev4x4 extends javax.swing.JFrame {
 
         jButton8.setText("jButton8");
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/galaxy_bonnetaille.jpg"))); // NOI18N
+        jLabel7.setText("jLabel7");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
@@ -1442,6 +1449,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton30s;
     private javax.swing.JRadioButton jRadioButton60s;
     private javax.swing.JLabel jlab1;
