@@ -240,7 +240,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             panneau_nomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_nomLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(26, 26, 26))
         );
 
@@ -319,6 +319,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         Label_Record.setForeground(new java.awt.Color(255, 255, 255));
         Label_Record.setText("Record :");
 
+        Label_Score.setForeground(new java.awt.Color(255, 255, 255));
+
+        score_max.setForeground(new java.awt.Color(255, 255, 255));
+
         jButton10.setText("Rejouer");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,6 +332,8 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre de parties jouées :");
+
+        nb_part.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout panneau_scoresLayout = new javax.swing.GroupLayout(panneau_scores);
         panneau_scores.setLayout(panneau_scoresLayout);
@@ -341,15 +347,11 @@ public class fenetreDeJeu extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(Label_Record)
                             .addComponent(jLabel2))
+                        .addGap(44, 44, 44)
                         .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panneau_scoresLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_scoresLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(jButton10))
@@ -362,21 +364,21 @@ public class fenetreDeJeu extends javax.swing.JFrame {
             panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_scoresLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jlab1)
-                .addGap(39, 39, 39)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
-                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(41, 41, 41)
-                        .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Label_Record))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addComponent(jlab1)
+                        .addGap(26, 26, 26)
+                        .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
+                .addGap(33, 33, 33)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(score_max, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Label_Record, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(23, 23, 23)
+                .addGap(38, 38, 38)
                 .addComponent(jButton10)
                 .addGap(38, 38, 38))
         );
@@ -418,10 +420,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -454,10 +458,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
             }
         }
@@ -489,10 +495,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -525,10 +533,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -561,10 +571,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -597,10 +609,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -633,10 +647,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -669,10 +685,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -704,10 +722,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v3x3_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v3x3_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -920,6 +940,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
       Bouton9.setEnabled(false);
       
       jButton1.setEnabled(true);
+      jButton10.setEnabled(true);
       
     }
   
