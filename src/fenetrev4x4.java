@@ -136,7 +136,6 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         panneau_chrono = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         tps_rest = new javax.swing.JLabel();
         jRadioButton30s = new javax.swing.JRadioButton();
         jRadioButton60s = new javax.swing.JRadioButton();
@@ -150,7 +149,6 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nb_part = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -317,13 +315,17 @@ public class fenetrev4x4 extends javax.swing.JFrame {
         getContentPane().add(panneau_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 430, -1));
 
         panneau_chrono.setBackground(new java.awt.Color(204, 102, 255));
+        panneau_chrono.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setText("Chrono");
+        panneau_chrono.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 30));
 
-        jLabel4.setText("sec");
+        tps_rest.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        panneau_chrono.add(tps_rest, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
         buttonGroup1.add(jRadioButton30s);
+        jRadioButton30s.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jRadioButton30s.setSelected(true);
         jRadioButton30s.setText("30 secondes");
         jRadioButton30s.addActionListener(new java.awt.event.ActionListener() {
@@ -331,60 +333,34 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                 jRadioButton30sActionPerformed(evt);
             }
         });
+        panneau_chrono.add(jRadioButton30s, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 20));
 
         buttonGroup1.add(jRadioButton60s);
+        jRadioButton60s.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jRadioButton60s.setText("60 secondes");
         jRadioButton60s.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton60sActionPerformed(evt);
             }
         });
+        panneau_chrono.add(jRadioButton60s, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
-        javax.swing.GroupLayout panneau_chronoLayout = new javax.swing.GroupLayout(panneau_chrono);
-        panneau_chrono.setLayout(panneau_chronoLayout);
-        panneau_chronoLayout.setHorizontalGroup(
-            panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panneau_chronoLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRadioButton60s)
-                    .addComponent(jRadioButton30s))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addGap(37, 37, 37))
-            .addGroup(panneau_chronoLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panneau_chronoLayout.setVerticalGroup(
-            panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panneau_chronoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(16, 16, 16)
-                .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panneau_chronoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(jRadioButton30s))
-                    .addComponent(tps_rest, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton60s)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 280, 100));
 
-        getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
+        panneau_scores.setBackground(new java.awt.Color(204, 204, 204,200));
 
-        panneau_scores.setBackground(new java.awt.Color(204, 204, 204));
-
-        jlab1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jlab1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jlab1.setText("Scores");
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel1.setText("Score actuel :");
 
+        Label_Record.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Label_Record.setText("Record :");
+
+        Label_Score.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+
+        score_max.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         jButton10.setText("Rejouer");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -393,7 +369,17 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel2.setText("Nombre de parties jouées :");
+
+        nb_part.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+
+        jButton1.setText("Version 3 x 3");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panneau_scoresLayout = new javax.swing.GroupLayout(panneau_scores);
         panneau_scores.setLayout(panneau_scoresLayout);
@@ -407,22 +393,19 @@ public class fenetrev4x4 extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(Label_Record)
                             .addComponent(jLabel2))
-                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panneau_scoresLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_scoresLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Label_Score, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(score_max, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(panneau_scoresLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(jButton10))
+                        .addGap(18, 18, 18)
+                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(score_max, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                            .addComponent(nb_part, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Label_Score, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(panneau_scoresLayout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(jlab1)))
+                        .addComponent(jlab1))
+                    .addGroup(panneau_scoresLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panneau_scoresLayout.setVerticalGroup(
@@ -430,35 +413,26 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             .addGroup(panneau_scoresLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jlab1)
-                .addGap(26, 26, 26)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(44, 44, 44)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
                     .addComponent(Label_Score, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Label_Record)
                     .addComponent(score_max, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(33, 33, 33)
+                .addGroup(panneau_scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(nb_part, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(jButton10)
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
 
-        getContentPane().add(panneau_scores, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 260, 290));
-
-        jButton1.setText("Version 3 x 3");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
-
-        jButton8.setText("jButton8");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
+        getContentPane().add(panneau_scores, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 280, 440));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/galaxy_bonnetaille.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
@@ -1443,11 +1417,9 @@ public class fenetrev4x4 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton30s;
