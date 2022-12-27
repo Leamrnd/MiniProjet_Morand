@@ -145,6 +145,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panneau_grille.setBackground(new java.awt.Color(153, 153, 153));
+        panneau_grille.setOpaque(false);
         panneau_grille.setLayout(new java.awt.GridLayout(3, 3));
 
         Bouton1.setBackground(new java.awt.Color(0, 0, 204));
@@ -247,7 +248,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         getContentPane().add(panneau_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 430, 100));
 
-        panneau_chrono.setBackground(new java.awt.Color(0, 255, 255));
+        panneau_chrono.setBackground(new java.awt.Color(0, 255, 255,200));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Chrono");
@@ -308,7 +309,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         getContentPane().add(panneau_chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 280, -1));
 
-        panneau_scores.setBackground(new java.awt.Color(102, 102, 102));
+        panneau_scores.setBackground(new java.awt.Color(102, 102, 102,200));
 
         jlab1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jlab1.setForeground(new java.awt.Color(255, 255, 255));
@@ -395,6 +396,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/saturne.jpg"))); // NOI18N
+        jLabel6.setOpaque(true);
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1660, 760));
 
         setBounds(0, 0, 814, 613);
