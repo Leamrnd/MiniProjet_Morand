@@ -395,8 +395,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 110, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/saturne.jpg"))); // NOI18N
-        jLabel6.setPreferredSize(new java.awt.Dimension(770, 570));
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 610));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1660, 760));
 
         setBounds(0, 0, 814, 613);
     }// </editor-fold>//GEN-END:initComponents
