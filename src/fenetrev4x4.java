@@ -484,10 +484,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -520,10 +522,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -556,10 +560,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -592,10 +598,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -628,10 +636,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -664,10 +674,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -700,10 +712,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -736,10 +750,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -771,10 +787,12 @@ public class fenetrev4x4 extends javax.swing.JFrame {
               if (chrono == chronotemp) {
                 PlayMusic("v4x4_30sec.wav");
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               else {
                 PlayMusic("v4x4_60sec.wav");  
                 jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
               }
               
             }
@@ -819,7 +837,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -855,7 +882,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -883,7 +919,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -911,7 +956,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -939,7 +993,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -967,7 +1030,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -995,7 +1067,16 @@ public class fenetrev4x4 extends javax.swing.JFrame {
             cpt_coup += 1;
             if (cpt_coup == 1) {
               chrono.start();
-              jButton1.setEnabled(false);
+              if (chrono == chronotemp) {
+                PlayMusic("v4x4_30sec.wav");
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
+              else {
+                PlayMusic("v4x4_60sec.wav");  
+                jButton1.setEnabled(false);
+                jButton10.setEnabled(false);
+              }
               
             }
         }
@@ -1257,6 +1338,7 @@ public class fenetrev4x4 extends javax.swing.JFrame {
       Bouton16.setEnabled(false);
       
       jButton1.setEnabled(true);
+      jButton10.setEnabled(true);
   }
   
   
